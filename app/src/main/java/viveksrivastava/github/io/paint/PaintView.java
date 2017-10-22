@@ -93,10 +93,11 @@ public class PaintView extends View {
     }
 
     public void undo()
-
     {
-        paths.remove(paths.size()-1);
-        invalidate();
+        if(paths.size()>0) {
+            paths.remove(paths.size() - 1);
+            invalidate();
+        }
     }
     public void clear() {
         backgroundColor = DEFAULT_BG_COLOR;
