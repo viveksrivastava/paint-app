@@ -17,13 +17,13 @@
     <item
         android:id="@+id/clear"
         android:title="Clear"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/menu_color_picker_dialog"
         android:icon="@drawable/ic_palette_white_24dp"
         android:title="@string/color_picker_dialog"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
     <item
         android:id="@+id/menu_github"
