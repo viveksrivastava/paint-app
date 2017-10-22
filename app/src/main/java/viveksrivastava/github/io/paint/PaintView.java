@@ -44,6 +44,7 @@ public class PaintView extends View {
 
     public void setCurrentColor(int color) {
         currentColor = color;
+        mPaint.setStyle(Paint.Style.STROKE);
     }
 
     public PaintView(Context context) {
@@ -91,7 +92,11 @@ public class PaintView extends View {
         emboss = false;
         blur = true;
     }
+   public void fill(int color)
+   {
+       //TODO implement fill
 
+   }
     public void undo()
     {
         if(paths.size()>0) {

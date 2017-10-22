@@ -23,12 +23,18 @@
         android:id="@+id/clear"
         android:title="Clear"
         app:showAsAction="never" />
-
+   <!-- <item
+        android:id="@+id/menu_fill_color_picker_dialog"
+        android:icon="@drawable/ic_palette_white_24dp"
+        android:title="@string/fill_color_picker_dialog"
+        app:showAsAction="always"
+        />
+-->
     <item
         android:id="@+id/menu_color_picker_dialog"
         android:icon="@drawable/ic_palette_white_24dp"
         android:title="@string/color_picker_dialog"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         />
     <item
         android:id="@+id/menu_github"

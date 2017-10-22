@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
 
     private PaintView paintView;
     private static final int DIALOG_ID = 0;
-
+    private static final int DIALOG_ID1 = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +75,15 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
                         .setShowAlphaSlider(true)
                         .show(this);
                 return true;
+            /*case R.id.menu_fill_color_picker_dialog:
+                ColorPickerDialog.newBuilder()
+                        .setDialogType(ColorPickerDialog.TYPE_PRESETS)
+                        .setAllowPresets(false)
+                        .setDialogId(DIALOG_ID1)
+                        .setColor(Color.BLACK)
+                        .setShowAlphaSlider(true)
+                        .show(this);
+                return true;*/
             case R.id.menu_github:
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW,
@@ -95,19 +104,17 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
                 paintView.setCurrentColor(color);
                 Toast.makeText(MainActivity.this, "Selected Color: #" + Integer.toHexString(color), Toast.LENGTH_SHORT).show();
                 break;
+            /*case DIALOG_ID1:
+                // We got result from the dialog that is shown when clicking on the icon in the action bar.
+                paintView.fill(color);
+                Toast.makeText(MainActivity.this, "Selected Fill Color: #" + Integer.toHexString(color), Toast.LENGTH_SHORT).show();
+                break;*/
         }
     }
 
     @Override public void onDialogDismissed(int dialogId) {
 
     }
-    public static class ExamplePreferenceFragment extends PreferenceFragment {
 
-        @Override public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.main);
-        }
-
-    }
 
 }
