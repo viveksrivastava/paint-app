@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
             case R.id.clear:
                 paintView.clear();
                 return true;
+            case R.id.undo:
+                paintView.undo();
+                return true;
             case R.id.menu_color_picker_dialog:
                 ColorPickerDialog.newBuilder()
                         .setDialogType(ColorPickerDialog.TYPE_PRESETS)

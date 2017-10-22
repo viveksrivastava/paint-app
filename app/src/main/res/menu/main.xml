@@ -15,9 +15,14 @@
         android:title="Blur"
         app:showAsAction="never" />
     <item
+        android:id="@+id/undo"
+        android:title="Undo"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/clear"
         android:title="Clear"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_color_picker_dialog"

@@ -42,9 +42,10 @@ public class PaintView extends View {
     private Canvas mCanvas;
     private Paint mBitmapPaint = new Paint(Paint.DITHER_FLAG);
 
-    public void setCurrentColor(int color){
-     currentColor=color;
-}
+    public void setCurrentColor(int color) {
+        currentColor = color;
+    }
+
     public PaintView(Context context) {
         this(context, null);
     }
@@ -91,6 +92,12 @@ public class PaintView extends View {
         blur = true;
     }
 
+    public void undo()
+
+    {
+        paths.remove(paths.size()-1);
+        invalidate();
+    }
     public void clear() {
         backgroundColor = DEFAULT_BG_COLOR;
         paths.clear();
