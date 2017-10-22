@@ -42,6 +42,9 @@ public class PaintView extends View {
     private Canvas mCanvas;
     private Paint mBitmapPaint = new Paint(Paint.DITHER_FLAG);
 
+    public void setCurrentColor(int color){
+     currentColor=color;
+}
     public PaintView(Context context) {
         this(context, null);
     }
